@@ -1733,7 +1733,7 @@ def main():
     # Strip NULLs out before processing
     originalData = originalData.replace("\x00", "")
 
-    # Launches the primary unraveling loop to begin cleaning up the script for profiling.
+    # 通过调用unravelContent(originalData)尝试对原有脚本进行解混淆处理
     startTime = datetime.now()
     alternativeData = "\n\n##### ORIGINAL SCRIPT #####\n\n%s\n\n##### ALTERED SCRIPT #####\n\n%s" %(originalData, unravelContent(originalData))
     stopTime = datetime.now() - startTime
